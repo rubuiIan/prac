@@ -1,0 +1,150 @@
+:root{
+    --main-color: rgb(15, 15, 15);
+    --secondary-color: rgb(241, 230, 230);
+    --color-radiant: gold;
+    --color-radiant-dark: rgb(78, 67, 3);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    min-height: 150vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    background-color: rgb(133, 133, 231);
+}
+.bg-dark-custom{
+    background-color: brown;
+}
+ .nav-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+}
+.logo img{
+    height: 50px;
+    width: 30px;
+}
+ .nav-section{
+     list-style: none; 
+}
+.nav-item{
+    float: left;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--secondary-color) !important;
+    padding: 10px 15px !important;
+}
+.nav-link :hover{
+    background-color: var(--secondary-color) !important;
+    color: green !important;
+    transition-property: all !important;
+    transition-duration: 1.5s !important;
+} 
+.custom-btn{
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    border-radius: 5px;
+}
+.custom-btn :hover{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 350px;
+    height: 60vh;
+    padding: 20px;
+}
+.banner-image, .banner-text{
+    flex-grow: 2.0;
+}
+.banner-image img{
+    max-height: 500px;
+    max-width: 460px;
+}
+.banner-text h1{
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+.banner-text p{
+    font-style: 1.5rem;
+}
+.active{
+    color:var(--color-radiant) !important;
+}
+/* MARGIN CLASSES */
+.m-1{
+    margin: 1rem;
+}
+.m-2{
+    margin: 2rem;
+}
+.m-3{
+    margin: 3rem;
+}
+.m-1{
+    margin-top: 1rem;
+}
+.m-2{
+    margin-top: 2rem;
+}
+.m-3{
+    margin-top: 3rem;
+}
+
+@media (max-width:768px){
+   
+    .banner{
+    flex-direction: column;
+    }
+    .banner-image{
+        order: 1;
+        margin-top: 3rem;
+    }
+    .banner-text{
+        order: 2;
+    }
+    .banner-text h1{
+        font-size: 2rem;
+    }
+    .banner-text p{
+        font-style: 0.5rem;
+    }
+    .nav-item{
+        float:none;
+    }
+    .nav-link{
+        text-decoration: none;
+        color: var(--secondary-color);
+        padding: 10px 15px;
+    }
+    .custom-btn{
+        text-decoration: none;
+        color: var(--secondary-color);
+        padding: 1px 10px;
+        border: 2px solid var(--secondary-color);
+        background-color: transparent;
+        border-radius: 5px;
+        float: center;
+        margin-bottom: 0;
+    }
+}
